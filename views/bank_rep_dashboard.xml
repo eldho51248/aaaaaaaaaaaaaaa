@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="grads_gateway_bank_rep_dashboard_tree_view" model="ir.ui.view">
+            <field name="model">dizpods.grads_gateway_bank_rep</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="phone"/>
+                    <field name="email"/>
+                    <field name="status"/>
+                    <field name="last_update"/>
+                    <field name="assigned"/>
+                </tree>
+            </field>
+        </record>
+        <record id="grads_gateway_bank_rep_dashboard_form_view" model="ir.ui.view">
+            <field name="name">dizpods.grads_gateway_bank_rep</field>
+            <field name="model">dizpods.grads_gateway_bank_rep</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div>
+                            <h1>
+                                <field name="name" class="my_custom_field"/>
+                            </h1>
+                            <div class="cardsWrapper">
+                                <div class="cardTemplate">
+                                    <p>Loan Application</p>
+                                    <button class="clickToVIew">Click to view</button>
+                                </div>
+                                <div class="cardTemplate">
+                                    <p>Uploaded Documents</p>
+                                    <button class="clickToVIew">Click to view</button>
+                                </div>
+                                <div class="cardTemplate">
+                                    <p>Status</p>
+                                    <h3 class="clickToVIew">Click to view</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dataTableWrap">
+                            <table>
+                                <tr class="dataHeading">
+                                    <th>Application ID</th>
+                                    <th>Requested loan Amount</th>
+                                    <th>Status</th>
+                                    <th>Executive Name</th>
+                                    <th>Phone</th>
+                                    <th>Remarks</th>
+                                </tr>
+                                <tr class="dataStatusContent">
+                                    <td>
+                                        <field name="application_id"/>
+                                    </td>
+                                    <td>
+                                        <field name="request_loan_amount"/>
+                                    </td>
+                                    <td>
+                                        <field name="status"/>
+                                    </td>
+                                    <td>
+                                        <span>Gopal Singh</span>
+                                    </td>
+                                    <td>
+                                        <span>7033895589</span>
+                                    </td>
+                                    <td>Lorem ipsum dolor sit amet consectetur</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="loanDataWrap">
+                            <h1>
+                                Loan Status
+                            </h1>
+                            <table>
+                                <tr class="dataHeading">
+                                    <th>Bank</th>
+                                    <th>Status</th>
+                                    <th>Last updated on</th>
+                                    <th>Remarks</th>
+                                </tr>
+                                <tr class="dataStatusContent">
+                                    <td>
+                                        <td>1234</td>
+                                    </td>
+                                    <td>
+                                        <field name="request_loan_amount"/>
+                                    </td>
+                                    <td>
+                                        <field name="status"/>
+                                    </td>
+                                    <td>remark</td>
+                                </tr>
+                                <tr class="dataStatusContent">
+                                    <td>1234</td>
+                                    <td>40- 70Lakhs</td>
+                                    <td>Application accepted</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur</td>
+                                </tr>
+                                <tr class="dataStatusContent">
+                                    <td>1234</td>
+                                    <td>40- 70Lakhs</td>
+                                    <td>Application accepted</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur</td>
+                                </tr>
+                                <tr class="dataStatusContent">
+                                    <td>1234</td>
+                                    <td>40- 70Lakhs</td>
+                                    <td>Application accepted</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur</td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+        <record id="grads_gateway_bank_rep_dashboard_action_id" model="ir.actions.act_window">
+            <field name="name">Bank Rep Dashboard</field>
+            <field name="res_model">dizpods.grads_gateway_bank_rep</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="grads_gateway_bank_rep_id"
+                  name="Grads gateway"/>
+
+        <menuitem id="grads_gateway_bank_rep_dashboard_id"
+                  name="Dashboard"
+                  parent="grads_gateway_bank_rep_id"
+                  action="grads_gateway_bank_rep_dashboard_action_id"
+                  groups="grads_gateway.bank_rep_dashboard"/>
+
+
+    </data>
+</odoo>

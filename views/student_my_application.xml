@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<odoo>
+    <record id="grads_gateway_tree_view" model="ir.ui.view">
+        <field name="name">grads.gateway.form</field>
+        <field name="model">dizpods.grads_gateway_student</field>
+        <field name="arch" type="xml">
+            <tree sample="1">
+                <field name="first_name"/>
+                <field name="last_name"/>
+                <field name="status"/>
+
+            </tree>
+        </field>
+    </record>
+    <record id="grads_gateway_student_application_form_view_id" model="ir.ui.view">
+        <field name="name">material.request.form</field>
+        <field name="model">dizpods.grads_gateway_student</field>
+        <field name="arch" type="xml">
+
+            <form>
+                <header>
+                    <button name="CreateAdminDashboard" string="Submit to Admin" type="object" class="oe_highlight"
+                            attrs="{'invisible': [('status','=', 'signup')]}"/>
+                </header>
+                <div class="alert alert-info" role="alert" style="height: 40px; margin-bottom:0px;">
+                    <p class="new">MY APPLICATION</p>
+                </div>
+                <br></br>
+                <br></br>
+                <sheet>
+                    <h1>
+                        <field class="app" name="reference_no"/>
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="status"/>
+                            <field name="first_name"/>
+                            <field name="current_address"/>
+                            <field name="state"/>
+                            <field name="email_id"/>
+                            <field name="last_college_university_attended"/>
+
+
+                        </group>
+                        <group>
+                            <br></br>
+                            <br></br>
+                            <field name="last_name"/>
+                            <field name="city"/>
+                            <field name="mobile_number"/>
+                            <field name="name_of_the_last_course_completed"/>
+                            <field name="marks_obtained_in_the_last_course"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Course Details">
+                            <form>
+                                <div class="alert alert-info" role="alert" style="height: 40px; margin-bottom:0px;">
+                                    <b>Course Details</b>
+                                </div>
+                                <group>
+                                    <group>
+                                        <field name="country_of_study"/>
+                                        <field name="course_type"/>
+                                        <field name="course_name"/>
+                                        <field name="when_loan_is_required"/>
+                                        <field name="bank_preference"/>
+                                        <field name="type_of_collateral_Offered"/>
+                                        <field name="city_where_collateral_located"
+                                               attrs="{'invisible': [('select_the_type_of_loan_required', '=', 'non_secured')]}"/>
+                                    </group>
+                                    <group>
+                                        <field name="current_status"/>
+                                        <field name="course_duration"/>
+                                        <field name="university_college_of_study"/>
+                                        <field name="loan_amount_in_rupees"/>
+                                        <field name="select_the_type_of_loan_required"/>
+                                        <field name="market_value_of_the_collateral"
+                                               attrs="{'invisible': [('select_the_type_of_loan_required', '=', 'non_secured')]}"/>
+                                        <field name="state_where_collateral_located"
+                                               attrs="{'invisible': [('select_the_type_of_loan_required', '=', 'non_secured')]}"/>
+
+                                    </group>
+                                </group>
+                            </form>
+                        </page>
+                        <page string="Co Applicant Detail">
+                            <form>
+                                <div class="alert alert-info" role="alert" style="height: 40px; margin-bottom:0px;">
+                                    <b>Co Applicant Details 1</b>
+                                </div>
+                                <br></br>
+                                <br></br>
+                                <group>
+                                    <group>
+                                        <field name="applicant1_first_name"/>
+                                        <field name="relationship_with_student"/>
+                                        <field name="applicant1_state"/>
+                                        <field name="co_applicant1_current_address"/>
+                                        <field name="co_applicant1_mobile_number"/>
+                                        <field name="profession_of_co_applicant"/>
+                                        <field name="name_of_employer_business"/>
+
+                                        <separator class="alert alert-info" string="Co Applicant Details 2" colspan="4"
+                                                   style="width:100%;"/>
+
+                                        <field name="co_applicant1_first_name"/>
+                                        <field name="applicant2_relationship_with_student"/>
+                                        <field name="applicant2_state"/>
+                                        <field name="co_applicant2_current_address"/>
+                                        <field name="co_applicant2_mobile_number"/>
+
+
+                                    </group>
+                                    <group>
+
+                                        <field name="applicant1_last_name"/>
+                                        <field name="applicant1_date_of_birth"/>
+                                        <field name="co_applicant1_city"/>
+                                        <field name="co_applicant1_email_address"/>
+                                        <field name="designation_of_co_applicant1"/>
+                                        <field name="net_monthly_income_salary"/>
+                                        <br></br>
+                                        <br></br>
+                                        <br></br>
+                                        <br></br>
+                                        <br></br>
+                                        <br></br>
+                                        <br></br>
+                                        <br></br>
+
+                                        <field name="applicant2_last_name"/>
+                                        <field name="applicant2_date_of_birth"/>
+                                        <field name="co_applicant2_city"/>
+                                        <field name="co_applicant2_email_address"/>
+
+                                    </group>
+                                </group>
+                            </form>
+                        </page>
+                    </notebook>
+                </sheet>
+
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_grads_gateway_student_id" model="ir.actions.act_window">
+        <field name="name">Grads gateway</field>
+        <field name="res_model">dizpods.grads_gateway_student</field>
+        <field name="view_mode">form,tree</field>
+    </record>
+
+    <menuitem id="grads_gateway_student_id"
+              name="Grads gateway"/>
+
+    <menuitem id="grads_gateway_student_faqs_id"
+              name="Dashboard"
+              parent="grads_gateway_student_id"
+              action="action_grads_gateway_student_dashboard_id"
+              groups="grads_gateway.student_dashboard"
+              sequence="1"/>
+
+    <!--    <menuitem id="grads_gateway_student_dashboard_idd"-->
+    <!--              name="Dashboard"-->
+    <!--              parent="grads_gateway_student_id"-->
+    <!--              action="grads_gateway_student_dashboard_actionn"-->
+    <!--              groups="grads_gateway.student_dashboard"/>-->
+    <menuitem id="grads_gateway_student_my_application_id"
+              name="My Application"
+              parent="grads_gateway_student_id"
+              action="action_grads_gateway_student_id"
+              groups="grads_gateway.student_dashboard"/>
+
+
+    <!--    <menuitem id="grads_gateway_student_contact_us_id"-->
+    <!--              name="Contact Us"-->
+    <!--              parent="grads_gateway_student_id"-->
+    <!--              action="action_grads_gateway_student_id"/>-->
+    <!--    <menuitem id="grads_gateway_student_privacy_policy_id"-->
+    <!--              name="Privacy Policy"-->
+    <!--              parent="grads_gateway_student_id"-->
+    <!--              action="action_grads_gateway_student_id"/>-->
+</odoo>

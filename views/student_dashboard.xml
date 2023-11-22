@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="grads_gateway_student_dashboard_view_tree" model="ir.ui.view">
+            <field name="model">dizpods.grads_gateway_student_dashboard</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="application_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="grads_gateway_student_dashboard_view_form" model="ir.ui.view">
+            <field name="name">Grads Gateway Student Dashboard</field>
+            <field name="model">dizpods.grads_gateway_student_dashboard</field>
+            <field name="arch" type="xml">
+
+                <form class="dashboardOuterWrap">
+                    <sheet>
+                        <div>
+
+                            <h1>
+
+                                <h1>HELLO</h1>
+
+                                <field name="name" class="my_custom_field"/>
+                            </h1>
+                            <div class="cardsWrapper">
+                                <div class="cardTemplate">
+                                    <p>Loan Application</p>
+                                    <button name="view_to_student_application" type="object" class="clickToVIew">Click
+                                        to view
+                                    </button>
+                                </div>
+                                <div class="cardTemplate">
+                                    <p>Uploaded Documents</p>
+                                    <button name="view_to_student_upload_documents" type="object" class="clickToVIew">
+                                        Click to view
+                                    </button>
+                                </div>
+                                <div class="cardTemplate">
+                                    <p>Status</p>
+                                    <h1>
+                                        <field name="status"/>
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dataTableWrap">
+                            <table>
+                                <tr class="dataHeading">
+                                    <th>Application ID</th>
+                                    <th>Requested loan Amount</th>
+                                    <th>Status</th>
+                                    <th>Executive Name</th>
+                                    <th>Phone</th>
+                                    <th>Remarks</th>
+                                </tr>
+                                <tr class="dataStatusContent">
+                                    <td>
+                                        <field name="application_id"/>
+                                    </td>
+                                    <td>
+                                        <field name="request_loan_amount"/>
+                                    </td>
+                                    <td>
+                                        <field name="status"/>
+                                    </td>
+                                    <td>
+                                        <field name="student_dash_executive_name"/>
+                                    </td>
+                                    <td>
+                                        <field name="student_dashboard_execu_number"/>
+                                    </td>
+
+                                    <td>
+                                        <field name="student_dashboard_remark"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="loanDataWrap">
+                            <h1>
+                                Loan Status
+                            </h1>
+                            <table>
+                                <!--                                <tr class="dataHeading">-->
+                                <!--                                    <th>Bank</th>-->
+                                <!--                                    <th>Status</th>-->
+                                <!--                                    <th>Last updated on</th>-->
+                                <!--                                    <th>Remarks</th>-->
+                                <!--                                </tr>-->
+                                <!--                                <tr class="dataStatusContent">-->
+                                <!--                                    <td>-->
+                                <!--                                        <field name="bank_preference"/>-->
+                                <!--                                    </td>-->
+                                <!--                                    <td>-->
+                                <!--                                        <field name="request_loan_amount"/>-->
+                                <!--                                    </td>-->
+                                <!--                                    <td>-->
+                                <!--                                        <field name="status"/>-->
+                                <!--                                    </td>-->
+                                <!--                                    <td>remark</td>-->
+                                <!--                                </tr>-->
+                                <!--                                <tr class="dataStatusContent">-->
+                                <!--                                    <field name="bank_preference"/>-->
+                                <!--                                    <td>40- 70Lakhs</td>-->
+                                <!--                                    <td>Application accepted</td>-->
+                                <!--                                    <td>Lorem ipsum dolor sit amet consectetur</td>-->
+                                <!--                                </tr>-->
+                                <!--                                <tr class="dataStatusContent">-->
+                                <!--                                    <td>1234</td>-->
+                                <!--                                    <td>40- 70Lakhs</td>-->
+                                <!--                                    <td>Application accepted</td>-->
+                                <!--                                    <td>Lorem ipsum dolor sit amet consectetur</td>-->
+                                <!--                                </tr>-->
+                                <!--                                <tr class="dataStatusContent">-->
+                                <!--                                    <td>1234</td>-->
+                                <!--                                    <td>40- 70Lakhs</td>-->
+                                <!--                                    <td>Application accepted</td>-->
+                                <!--                                    <td>Lorem ipsum dolor sit amet consectetur</td>-->
+                                <!--                                </tr>-->
+                            </table>
+
+                        </div>
+                        <br></br>
+                        <br></br>
+                        <!--                        <group>-->
+
+                        <!--                            <group>-->
+                        <!--                                <field name="bank_ids"/>-->
+
+                        <!--                            </group>-->
+
+                        <!--                        </group>-->
+                        <!--                        <notebook>-->
+                        <!--                            <page string="Loan Status">-->
+                        <!--                                <group>-->
+                        <!--                                    <field name="bank"/>-->
+                        <!--                                    <field name="stud_dashboard_status"/>-->
+                        <!--                                    <field name="last_updated_on"/>-->
+                        <!--                                    <field name="stud_dashboard_remark"/>-->
+                        <!--                                </group>-->
+                        <!--                            </page>-->
+                        <!--                            <page string="Sanctioned Loan">-->
+                        <!--                                <group>-->
+                        <!--                                    <field name="sanctioned_bank"/>-->
+                        <!--                                    <field name="student_sanctioned_amount"/>-->
+                        <!--                                    <field name="student_remaining_amount"/>-->
+                        <!--                                    <field name="student_sanctioned_date"/>-->
+                        <!--                                </group>-->
+
+                        <!--                            </page>-->
+                        <!--                            <page string="Disbursement">-->
+                        <!--                                <group>-->
+                        <!--                                    <field name="student_disbursement"/>-->
+                        <!--                                    <field name="student_disbursement_date"/>-->
+                        <!--                                    <field name="student_disbursement_amount"/>-->
+                        <!--                                </group>-->
+
+                        <!--                            </page>-->
+                        <!--                        </notebook>-->
+                        <group>
+                            <field style="width:1000px;" name="student_dashboard_bank_ids" string=""
+                                   options="{'no_create': True, 'no_edit': True}">
+                                <tree editable="bottom">
+                                    <field name="bank"/>
+                                    <field name="student_dashboard_status"/>
+                                    <field name="student_dash_last_updated_on"/>
+                                    <field name="student_dash_remark"/>
+
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+        <record id="action_grads_gateway_student_dashboard_id" model="ir.actions.act_window">
+            <field name="name">Grads Gateway Student Dashboard</field>
+            <field name="res_model">dizpods.grads_gateway_student_dashboard</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+    </data>
+</odoo>

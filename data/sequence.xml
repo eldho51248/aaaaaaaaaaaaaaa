@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="dizpods_grads_gateway_sequence_id" model="ir.sequence">
+            <field name="name">Sequence Number</field>
+            <field name="code">dizpods.grads_gateway_student</field>
+            <field name="prefix">STU</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

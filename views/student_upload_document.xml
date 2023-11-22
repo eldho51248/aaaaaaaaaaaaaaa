@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="grads_gateway_student_upload_ducuments_tree_view" model="ir.ui.view">
+        <field name="name">grads.gateway.student.upload.document.tree</field>
+        <field name="model">dizpods.student_upload.document</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="aadhar_card_ids" widget="many2many_binary"/>
+                <field name="passport_copy_ids" widget="many2many_binary"/>
+                <field name="twelfth_score_card_ids" widget="many2many_binary"/>
+                <field name="master_individual_memos_and_provisional_ids" widget="many2many_binary"/>
+                <field name="ielts_ids" widget="many2many_binary"/>
+                <field name="duolingo_ids" widget="many2many_binary"/>
+                <field name="visa_copy_ids" widget="many2many_binary"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <record id="grads_gateway_student_upload_ducuments_form_view" model="ir.ui.view">
+        <field name="name">grads.gateway.student.upload.document.form</field>
+        <field name="model">dizpods.student_upload.document</field>
+        <field name="arch" type="xml">
+            <form>
+                <div class="alert alert-info" role="alert" style="height: 40px; margin-bottom:0px;">
+                    <b>UPLOAD DOCUMENTS</b>
+                </div>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="aadhar_card_ids" widget="many2many_binary" string='Aadhar Card'/>
+                            <field name="passport_copy_ids" widget="many2many_binary"
+                                   string='Passport Copy (Front and last Page)'/>
+                            <field name="twelfth_score_card_ids" widget="many2many_binary" string='12th Score Card'/>
+                            <field name="master_individual_memos_and_provisional_ids" widget="many2many_binary" string='Master Individual Memos and Provisional'/>
+                            <field name="ielts_ids" widget="many2many_binary" string='IELTS'/>
+                            <field name="duolingo_ids" widget="many2many_binary" string='Duolingo'/>
+                            <field name="visa_copy_ids" widget="many2many_binary" string='Visa Copy'/>
+
+
+                        </group>
+                        <group>
+                            <field name="pan_card_ids" widget="many2many_binary" string='Pan Card'/>
+                            <field name="tenth_score_card_ids" widget="many2many_binary" string='10th Score Card'/>
+                            <field name="bachelors_individual_memos_and_provisional_ids" widget="many2many_binary" string='Bachelors Individual and Memos Provisional'/>
+                            <field name="gre_score_card_ids" widget="many2many_binary" string='GRE Score Card'/>
+                            <field name="toefl_ids" widget="many2many_binary" string='TOEFL'/>
+                            <field name="admission_letter_ids" widget="many2many_binary" string='Admission Letter'/>
+                            <field name="one_twenty_document_ids" widget="many2many_binary" string='120 Document'/>
+
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Co Applicant Documents">
+                            <form>
+                                <div class="alert alert-info" role="alert" style="height: 40px; margin-bottom:0px;">
+                                    <b>Co Applicant Documents</b>
+                                </div>
+                                <group>
+                                    <group>
+                                        <field name="co_applicant1_aadhar_card_ids" widget="many2many_binary" string='Aadhar Card'/>
+                                        <field name="latest_electricity_bill_house_tax_paid_receipt_ids"
+                                               widget="many2many_binary" string='Latest Electricity Bill / House tax paid receipt'/>
+                                        <field name="latest_6_months_salary_credited_bank_statement_ids"
+                                               widget="many2many_binary" string='Latest 6 Months Salary Credited Bank Statement'/>
+                                        <field name="latest_3_months_salary_credited_bank_statement_ids"
+                                               widget="many2many_binary" string='Latest 3 Months Salary Credited Bank Statement'/>
+                                        <field name="latest_6_months_savings_and_current_statement_ids"
+                                               widget="many2many_binary" string='Latest 6 Months savings and Current Statement'/>
+                                        <field name="business_proof_ids" widget="many2many_binary" string='Business Proof'/>
+                                    </group>
+                                    <group>
+                                        <field name="co_applicant1_pan_card_ids" widget="many2many_binary"/>
+                                        <field name="passport_size_photo_ids" widget="many2many_binary" string='Passport Size Photo'/>
+                                        <field name="latest_2_years_form_16_ids" widget="many2many_binary" string='Latest 2 Years Form 16'/>
+                                        <br></br>
+                                        <br></br>
+                                        <field name="agriculture_income_certificate_ids" widget="many2many_binary" string='Agriculture Income Certificate '/>
+                                        <field name="two_itr_filing_along_with_scheduler_ids"
+                                               widget="many2many_binary" string='2 ITR Filing Along with Scheduler'/>
+                                    </group>
+                                </group>
+                            </form>
+                        </page>
+                        <page string="Collateral Documents">
+                            <form>
+                                <div class="alert alert-info" role="alert" style="height: 40px; margin-bottom:0px;">
+                                    <b>Collateral Documents</b>
+                                </div>
+                                <div class="alert alert-info" role="alert" style="height: 40px; margin-bottom:0px;">
+                                    <b>Note:</b>Upload these documents only if you've chosen collateral Loan if Not you
+                                    can Skip this step<strong></strong>.
+                                </div>
+                                <br></br>
+                                <group>
+                                    <group>
+                                        <field name="property_sale_deed_ids" widget="many2many_binary" string='Property Sale Deed'/>
+                                        <field name="tax_receipt_ids" widget="many2many_binary" string='Tax Receipt'/>
+
+                                    </group>
+                                    <group>
+                                        <field name="linked_documents_ids" widget="many2many_binary" string='Linked Documents'/>
+                                        <field name="layout_plan_ids" widget="many2many_binary" string='Layout Plan'/>
+                                    </group>
+                                </group>
+                            </form>
+                        </page>
+                        <page string="Other Documents">
+                            <form>
+                                <div class="alert alert-info" role="alert" style="height: 40px; margin-bottom:0px;">
+                                    <b>Other Documents</b>
+                                </div>
+                                <div class="alert alert-info" role="alert" style="height: 40px; margin-bottom:0px;">
+                                    <b>Note:</b>If there are any additional Documents Not listed on the Portal that the
+                                    banks require, you can upload them here<strong></strong>.
+                                </div>
+                                <br></br>
+                                <group>
+                                    <group>
+                                        <field name="drag_and_drops_files" widget="many2many_binary" string='Drag and Drop Files'/>
+                                    </group>
+                                </group>
+                            </form>
+                        </page>
+                    </notebook>
+                </sheet>
+
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_grads_gateway_student_upload_ducument_id" model="ir.actions.act_window">
+        <field name="name">Upload Application</field>
+        <field name="res_model">dizpods.student_upload.document</field>
+        <field name="view_mode">form,tree</field>
+    </record>
+
+    <menuitem id="grads_gateway_student_upload_documents_id"
+              name="Upload Documents"
+              parent="grads_gateway_student_id"
+              action="action_grads_gateway_student_upload_ducument_id"
+              groups="grads_gateway.student_dashboard"/>
+
+</odoo>

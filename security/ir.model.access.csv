@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_dizpods_grads_gateway_student,dizpods.grads_gateway_student,model_dizpods_grads_gateway_student,base.group_user,1,1,1,1
+access_dizpods_student_upload_document,dizpods.student_upload.document,model_dizpods_student_upload_document,base.group_user,1,1,1,1
+access_dizpods_grads_gateway_admin,dizpods.grads_gateway_admin,model_dizpods_grads_gateway_admin,base.group_user,1,1,1,1
+access_dizpods_grads_gateway_rep,dizpods.grads_gateway_rep,model_dizpods_grads_gateway_rep,base.group_user,1,1,1,1
+access_dizpods_grads_gateway_bank_rep,dizpods.grads_gateway_bank_rep,model_dizpods_grads_gateway_bank_rep,base.group_user,1,1,1,1
+access_dizpods_bank,dizpods.bank,model_dizpods_bank,base.group_user,1,1,1,1
+access_dizpods_grads_gateway_student_dashboard,dizpods.grads_gateway_student_dashboard,model_dizpods_grads_gateway_student_dashboard,base.group_user,1,1,1,1
+access_bbank_bank,bbank.bank,model_bbank_bank,base.group_user,1,1,1,1

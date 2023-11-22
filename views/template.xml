@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="my_custom_template" name="My Custom Template">
+            <!-- Link your custom CSS file -->
+            <link rel="stylesheet" href="/grads_gateway/static/css/styles.css" type="text/css"/>
+            <!-- Your HTML content here -->
+            <div class="my-custom-field">This is a custom-styled text.</div>
+        </template>
+    </data>
+</odoo>

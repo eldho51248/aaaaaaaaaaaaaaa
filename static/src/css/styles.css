@@ -1,0 +1,50 @@
+.o_form_sheet{
+}
+h1{
+margin:20px 18px;
+}
+.cardsWrapper {
+	display: flex;
+	margin: 20px 0 30px;
+}
+
+.cardTemplate {
+	border: 1px solid #EAECEE;
+	padding: 25px 25px 0px;
+	border-radius: 12px;
+	width: 360px;
+	margin: 0 10px;
+}
+
+.clickToVIew {
+	font-size: 24px;
+	opacity: unset !important;
+	padding: 20px 0;
+}
+
+.dataTableWrap {
+	margin: 14px;
+}
+
+.dataHeading th {
+	font-size: 14px;
+	width: 18%;
+    padding: 12px 0px 12px 20px;
+}
+.dataStatusContent{border-bottom:2px solid #FAFAFA;}
+.dataStatusContent td {
+    padding: 15px 18px;
+}
+.dataStatusContent span{
+
+    border-radius: 55px;
+    padding: 5px 15px;
+    margin-top: 10px;
+
+    text-wrap: nowrap;
+}
+tr.dataHeading :nth-child(1){width:12% !important; }
+tr.dataHeading :nth-child(3){width:16% !important; }
+tr.dataHeading :nth-child(4){width:13% !important; }
+tr.dataHeading :nth-child(5){width:5% !important; }
+tr.dataHeading :nth-child(6){width:26% !important; }
